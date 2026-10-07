@@ -1,6 +1,6 @@
-# terraform {
-#   backend "gcs" {
-#     bucket  = "infrastructure-lab-tf-state"
-#     prefix  = "terraform/state"
-#   }
-# }
+terraform {
+  backend "gcs" {
+    bucket  = "infrastructure-lab-tf-state"
+    prefix  = "terraform/state/test"
+  }
+}
