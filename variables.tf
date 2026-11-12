@@ -6,12 +6,15 @@ variable "project_id" {
 
 variable "region" {
   type        = string
-  description = "The region to host the cluster in (optional if zonal cluster / required if regional)"
+  description = "GCP region"
   default     = "us-central1"
 }
 
 variable "environment" {
-  description = "Environment name"
+  description = "Deployment environment"
   type        = string
-  default     = "Test"
+  validation {
+    condition     = contains(["dev", "staging", "prod"], var.environment)
+    error_message = "Environment must be dev, staging, or prod."
+  }
 }
