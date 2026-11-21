@@ -1,7 +1,6 @@
 variable "project_id" {
   description = "GCP Infrastructure Lab project"
   type        = string
-  default     = "quiet-mechanic-510301-h5"
 }
 
 variable "region" {
